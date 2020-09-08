@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Document</title><meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
     <link rel="stylesheet" href="mojo.css">
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
 <style>
     #xandy{
         position:absolute;
@@ -13,17 +14,21 @@
         position:absolute;
         display:none;
     }
+    body{
+        background-image: url(bg.png);
+        background-repeat: no-repeat;
+background-size:cover
+    }
 </style>
 </head>
 <body>
     <center>
     <h1 class='btn btn-primary'>Mirror View</h1>
-    <h2 class="btn btn-success">Your Mirror</h2><a class="url">Funnify</a><br>
+    <h2 class="btn btn-success">Your Mirror</h2><br>
     <button onclick="myFunc()">Remember This</button>
-    <div id="xandy"><button id="noseToggle">Nose Toggle</button><br><button>Smart Goggles Toggle</button><br><button>Crown</button><br>
-        <button>Eyes</button>
-    </div>
-    <div id="noses"><button>Yellow</button><br><button>Red</button></div>
+    <div id="xandy"><button id="noseToggle" onclick="nt()">Nose Toggle</button><br><button onclick="st()">Smart Goggles Toggle</button><br><button onclick="ct()">Crown</button><br>
+        <button onclick='ht()'>Horns</button>
+    </div> 
     <footer>powered by P5</footer>
     </center>
     <script src="main.js"></script>
