@@ -9,7 +9,7 @@ var crown_visible="";
 var c_width=0;
 function preload(){
     nose=loadImage('nose.png');
-    googles=loadImage('gog.png');
+    googles=loadImage('GooglesFinal.png');
     crown=loadImage('https://i.postimg.cc/1zKPX6xB/crown.png');
     horns=loadImage('horns.png')
 }
@@ -32,7 +32,7 @@ function draw(){
     console.log(specs_visible);
     image(video, 0, 0, 400, 400);
     if(nose_visible=="yes"){
-        image(nose, noseX, noseY, 20, 20);
+        image(nose, noseX, noseY, 40, 40);
     }
     if(specs_visible=="yes"){
         image(googles, specsX, specsY,100, 50); 
@@ -75,9 +75,9 @@ posenet.on('pose', getVal);
 }
 function getVal(results){
     console.log(results);
-    noseX=results[0].pose.nose.x-160;
+    noseX=results[0].pose.nose.x-180;
     console.log(noseX);
-    noseY=results[0].pose.nose.y-40;
+    noseY=results[0].pose.nose.y-60;
     specsX=results[0].pose.rightEye.x-160;
     specsY=results[0].pose.rightEye.y-70;
     crownX=results[0].pose.nose.x-40;
